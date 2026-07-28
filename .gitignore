@@ -16,3 +16,7 @@ yarn-error.log*
 
 # Others
 .history
+
+# EPUB build
+temp_epub/
+*.epub

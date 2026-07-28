@@ -11,7 +11,8 @@
     "build": "vuepress build docs",
     "precommit": "lint-staged",
     "contributor:add": "all-contributors add",
-    "contributor:generate": "all-contributors generate"
+    "contributor:generate": "all-contributors generate",
+    "build:epub": "python scripts/build_epub.py"
   },
   "lint-staged": {
     "linters": {

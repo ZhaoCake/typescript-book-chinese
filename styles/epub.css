@@ -1,0 +1,232 @@
+/* ─────────────────────────────────────────────
+   深入理解 TypeScript — EPUB 自定义样式
+   ───────────────────────────────────────────── */
+
+/* === 基本排版 === */
+body {
+  font-family: "Noto Sans CJK SC", "Source Han Sans CN", "PingFang SC",
+    "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+  line-height: 1.8;
+  font-size: 0.95em;
+  color: #333;
+  widows: 2;
+  orphans: 2;
+  text-align: justify;
+}
+
+/* === 标题 === */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: #222;
+  page-break-after: avoid;
+}
+
+h1 {
+  font-size: 1.6em;
+  border-bottom: 2px solid #3eaf7c;
+  padding-bottom: 0.3em;
+  margin-top: 1.5em;
+}
+
+h2 {
+  font-size: 1.3em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.2em;
+  margin-top: 1.2em;
+}
+
+h3 {
+  font-size: 1.1em;
+  margin-top: 1em;
+}
+
+/* === 段落 === */
+p {
+  margin: 0.6em 0;
+  text-indent: 0;
+}
+
+/* === 代码 === */
+code {
+  font-family: "Cascadia Code", "Fira Code", "JetBrains Mono",
+    "Source Code Pro", Consolas, monospace;
+  font-size: 0.85em;
+  background-color: #f5f5f5;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  color: #476582;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0.8em 1em;
+  margin: 0.8em 0;
+  overflow-x: auto;
+  font-size: 0.82em;
+  line-height: 1.5;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+}
+
+/* === 代码块中的语法高亮 (pandoc 默认样式) === */
+.sourceCode .kw { color: #d73a49; font-weight: bold; }   /* 关键字 */
+.sourceCode .dt { color: #6f42c1; }                      /* 类型 */
+.sourceCode .dv { color: #032f62; }                      /* 数字 */
+.sourceCode .st { color: #032f62; }                      /* 字符串 */
+.sourceCode .fu { color: #6f42c1; }                      /* 函数 */
+.sourceCode .co { color: #6a737d; font-style: italic; }  /* 注释 */
+.sourceCode .va { color: #e36209; }                      /* 变量 */
+
+/* === 提示框 (pandoc fenced divs) === */
+div.tip, div.warning, div.danger {
+  margin: 1em 0;
+  padding: 0.6em 1em;
+  border-left: 4px solid;
+  border-radius: 3px;
+  page-break-inside: avoid;
+}
+
+div.tip {
+  background-color: #e8f5e9;
+  border-left-color: #4caf50;
+}
+
+div.tip::before {
+  content: "💡 提示";
+  display: block;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 0.3em;
+}
+
+div.warning {
+  background-color: #fff3e0;
+  border-left-color: #ff9800;
+}
+
+div.warning::before {
+  content: "⚠️ 注意";
+  display: block;
+  font-weight: 600;
+  color: #e65100;
+  margin-bottom: 0.3em;
+}
+
+div.danger {
+  background-color: #fbe9e7;
+  border-left-color: #e53935;
+}
+
+div.danger::before {
+  content: "🚨 重要提示";
+  display: block;
+  font-weight: 600;
+  color: #c62828;
+  margin-bottom: 0.3em;
+}
+
+/* === 引用块 === */
+blockquote {
+  border-left: 3px solid #3eaf7c;
+  margin: 0.8em 0;
+  padding: 0.3em 1em;
+  color: #555;
+  background-color: #f9f9f9;
+}
+
+/* === 表格 === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.9em;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 0.5em 0.8em;
+  text-align: left;
+}
+
+table th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* === 列表 === */
+ul, ol {
+  margin: 0.4em 0;
+  padding-left: 1.5em;
+}
+
+li {
+  margin: 0.2em 0;
+}
+
+/* === 链接 === */
+a {
+  color: #3eaf7c;
+  text-decoration: none;
+}
+
+/* === 图片 === */
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.8em auto;
+  display: block;
+}
+
+/* === 目录 (TOC) === */
+nav#toc {
+  margin: 1em 0;
+}
+
+nav#toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav#toc ul ul {
+  padding-left: 1.5em;
+}
+
+nav#toc li {
+  margin: 0.3em 0;
+}
+
+nav#toc a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* === 封面 === */
+h1.title {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 2em;
+  border: none;
+}
+
+p.author {
+  text-align: center;
+  font-size: 1.1em;
+  color: #666;
+  margin-top: 1em;
+}
+
+/* === 分页 === */
+h1, h2, h3 {
+  page-break-after: avoid;
+}
